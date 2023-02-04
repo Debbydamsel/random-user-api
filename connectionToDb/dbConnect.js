@@ -8,17 +8,19 @@ let client = new MongoClient(mongodb_connection_url);
 //MongoClient.connect(mongodb_connection_url, { useNewUrlParser: true, useUnifiedTopology: true })
 
 async function run() {
-    try {
+    
         await client.connect();
         await client.db("admin").command({ ping: 1 });
         console.log("Connected to mongodb successfully!");
- } finally {
-        //await client.close();
-}
+ }
+       
+async function closeDbConnection() {
+    await client.close();
+    console.log("Mongodb connection closed!")
 }
 
 
-module.exports = {run, client};
+module.exports = {run, client, closeDbConnection};
 
 
 

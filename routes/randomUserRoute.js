@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const {run} = require("../connectionToDb/dbConnect");
 
 const users = require("../controllers/randomUserController");
 
