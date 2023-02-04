@@ -4,13 +4,13 @@
 
 // run().catch(console.dir);
 
-// const db = client.db("randomUserDb");
+// const db = client.db("test");
 // const collection = db.collection("randomUser");
 
 
 // let randomUsers = [];
 
-// for (var i = 0; i < 100; i++) {
+// for (var i = 0; i < 500; i++) {
 //     randomUsers.push({
 //         firstName: faker.name.firstName(),
 //         lastName: faker.name.lastName(), 
@@ -20,7 +20,8 @@
 //         phoneNumber: faker.phone.number(), 
 //         city: faker.address.city(), 
 //         state: faker.address.state(), 
-//         country: faker.address.country()
+//         country: faker.address.country(),
+//         bio: faker.lorem.sentences(5)
 //     })
 // }
 

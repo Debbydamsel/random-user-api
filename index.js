@@ -4,22 +4,13 @@ require("dotenv").config();
 const port = process.env.PORT;
 const randomUserRoute = require("./routes/randomUserRoute");
 let { run } = require("./connectionToDb/dbConnect");
+const fileUploadRouter = require("./routes/fileUploadRoute");
 
 
 //connection to mongodb through mongodb client
 run().catch(console.dir);
 
-
-
-// const db = client.db("randomUserDb");
-// const collection = db.collection("randomUser");
-
-
-
-
-
-
-
+app.use("/file", fileUploadRouter)
 app.use("/random-user", randomUserRoute);
 
 
